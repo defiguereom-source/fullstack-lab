@@ -1,0 +1,8 @@
+{
+  "people": [
+    { "name": "Alice", "age": 30, "number": "123-456-7890" },
+    { "name": "Bob", "age": 25, "number": "098-765-4321" },
+    { "name": "Charlie", "age": 35, "number": "555-555-5555" }
+  ]
+}
+
