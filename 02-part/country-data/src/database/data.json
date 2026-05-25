@@ -1,0 +1,249 @@
+{
+  "Country": [
+    {
+      "name": "Argentina",
+      "capital": "Buenos Aires",
+      "population": 45767486,
+      "area": 2780414,
+      "flag": "https://flagcdn.com/w320/ar.png"
+    },
+    {
+      "name": "Bolivia",
+      "capital": "Sucre",
+      "population": 11674000,
+      "area": 1098581,
+      "flag": "https://flagcdn.com/w320/bo.png"
+    },
+    {
+      "name": "Brazil",
+      "capital": "Brasília",
+      "population": 212559409,
+      "area": 8514877,
+      "flag": "https://flagcdn.com/w320/br.png"
+    },
+    {
+      "name": "Canada",
+      "capital": "Ottawa",
+      "population": 38005238,
+      "area": 9984670,
+      "flag": "https://flagcdn.com/w320/ca.png"
+    },
+    {
+      "name": "Chile",
+      "capital": "Santiago",
+      "population": 19116201,
+      "area": 756102,
+      "flag": "https://flagcdn.com/w320/cl.png"
+    },
+    {
+      "name": "China",
+      "capital": "Beijing",
+      "population": 1439323776,
+      "area": 9596961,
+      "flag": "https://flagcdn.com/w320/cn.png"
+    },
+    {
+      "name": "Colombia",
+      "capital": "Bogotá",
+      "population": 50882884,
+      "area": 1141748,
+      "flag": "https://flagcdn.com/w320/co.png"
+    },
+    {
+      "name": "Costa Rica",
+      "capital": "San José",
+      "population": 5094114,
+      "area": 51100,
+      "flag": "https://flagcdn.com/w320/cr.png"
+    },
+    {
+      "name": "Cuba",
+      "capital": "Havana",
+      "population": 11326616,
+      "area": 109884,
+      "flag": "https://flagcdn.com/w320/cu.png"
+    },
+    {
+      "name": "Dominican Republic",
+      "capital": "Santo Domingo",
+      "population": 10629265,
+      "area": 48671,
+      "flag": "https://flagcdn.com/w320/do.png"
+    },
+    {
+      "name": "Ecuador",
+      "capital": "Quito",
+      "population": 17643054,
+      "area": 256370,
+      "flag": "https://flagcdn.com/w320/ec.png"
+    },
+    {
+      "name": "El Salvador",
+      "capital": "San Salvador",
+      "population": 6486205,
+      "area": 20760,
+      "flag": "https://flagcdn.com/w320/sv.png"
+    },
+    {
+      "name": "France",
+      "capital": "Paris",
+      "population": 67391000,
+      "area": 643801,
+      "flag": "https://flagcdn.com/w320/fr.png"
+    },
+    {
+      "name": "Germany",
+      "capital": "Berlin",
+      "population": 83783942,
+      "area": 357022,
+      "flag": "https://flagcdn.com/w320/de.png"
+    },
+    {
+      "name": "Guatemala",
+      "capital": "Guatemala City",
+      "population": 16604078,
+      "area": 108889,
+      "flag": "https://flagcdn.com/w320/gt.png"
+    },
+    {
+      "name": "Haiti",
+      "capital": "Port-au-Prince",
+      "population": 11402533,
+      "area": 27750,
+      "flag": "https://flagcdn.com/w320/ht.png"
+    },
+    {
+      "name": "Honduras",
+      "capital": "Tegucigalpa",
+      "population": 9904608,
+      "area": 112492,
+      "flag": "https://flagcdn.com/w320/hn.png"
+    },
+    {
+      "name": "India",
+      "capital": "New Delhi",
+      "population": 1380004385,
+      "area": 3287263,
+      "flag": "https://flagcdn.com/w320/in.png"
+    },
+    {
+      "name": "Italy",
+      "capital": "Rome",
+      "population": 59554023,
+      "area": 301340,
+      "flag": "https://flagcdn.com/w320/it.png"
+    },
+    {
+      "name": "Jamaica",
+      "capital": "Kingston",
+      "population": 2961167,
+      "area": 10991,
+      "flag": "https://flagcdn.com/w320/jm.png"
+    },
+    {
+      "name": "Japan",
+      "capital": "Tokyo",
+      "population": 126476461,
+      "area": 377930,
+      "flag": "https://flagcdn.com/w320/jp.png"
+    },
+    {
+      "name": "Mexico",
+      "capital": "Mexico City",
+      "population": 128932753,
+      "area": 1964375,
+      "flag": "https://flagcdn.com/w320/mx.png"
+    },
+    {
+      "name": "Nicaragua",
+      "capital": "Managua",
+      "population": 6621554,
+      "area": 130373,
+      "flag": "https://flagcdn.com/w320/ni.png"
+    },
+    {
+      "name": "Panama",
+      "capital": "Panama City",
+      "population": 4319268,
+      "area": 75494,
+      "flag": "https://flagcdn.com/w320/pa.png"
+    },
+    {
+      "name": "Paraguay",
+      "capital": "Asunción",
+      "population": 7132538,
+      "area": 196445,
+      "flag": "https://flagcdn.com/w320/py.png"
+    },
+    {
+      "name": "Peru",
+      "capital": "Lima",
+      "population": 32971854,
+      "area": 1285216,
+      "flag": "https://flagcdn.com/w320/pe.png"
+    },
+    {
+      "name": "Philippines",
+      "capital": "Manila",
+      "population": 109034753,
+      "area": 342353,
+      "flag": "https://flagcdn.com/w320/ph.png"
+    },
+    {
+      "name": "Portugal",
+      "capital": "Lisbon",
+      "population": 10309267,
+      "area": 92090,
+      "flag": "https://flagcdn.com/w320/pt.png"
+    },
+    {
+      "name": "Puerto Rico",
+      "capital": "San Juan",
+      "population": 3194034,
+      "area": 8870,
+      "flag": "https://flagcdn.com/w320/pr.png"
+    },
+    {
+      "name": "Russia",
+      "capital": "Moscow",
+      "population": 145934000,
+      "area": 17098242,
+      "flag": "https://flagcdn.com/w320/ru.png"
+    },
+    {
+      "name": "Spain",
+      "capital": "Madrid",
+      "population": 46754783,
+      "area": 505992,
+      "flag": "https://flagcdn.com/w320/es.png"
+    },
+    {
+      "name": "United Kingdom",
+      "capital": "London",
+      "population": 55980000,
+      "area": 242495,
+      "flag": "https://flagcdn.com/w320/gb.png"
+    },
+    {
+      "name": "United States",
+      "capital": "Washington, D.C.",
+      "population": 331002651,
+      "area": 9826675,
+      "flag": "https://flagcdn.com/w320/us.png"
+    },
+    {
+      "name": "Uruguay",
+      "capital": "Montevideo",
+      "population": 3473727,
+      "area": 176215,
+      "flag": "https://flagcdn.com/w320/uy.png"
+    },
+    {
+      "name": "Venezuela",
+      "capital": "Caracas",
+      "population": 28435940,
+      "area": 916445,
+      "flag": "https://flagcdn.com/w320/ve.png"
+    }
+  ]
+}
