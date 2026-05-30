@@ -6,9 +6,9 @@ interface LoginPageProps {
 }
 
 const LoginPage = ({ onLogin }: LoginPageProps) => {
+ 
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
-
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -17,12 +17,13 @@ const LoginPage = ({ onLogin }: LoginPageProps) => {
       password,
     };
 
+    localStorage.setItem("user", JSON.stringify(data));
     console.log(data);
     onLogin();
   };
 
   return (
-<div className="container-fluid bg-dark min-vh-100 d-flex justify-content-center align-items-center">
+  <div className="container-fluid bg-dark min-vh-100 d-flex justify-content-center align-items-center">
 
   <div className="card border-0 shadow-lg p-4" style={{ width: "100%", maxWidth: "420px", backgroundColor: "#1e1e1e", color: "white" }}>
 

@@ -38,6 +38,14 @@ function App() {
     setIsLoggedIn(true)
   }
 
+  useEffect(() => {
+    const user = localStorage.getItem('user')
+
+    if (user) {
+      setIsLoggedIn(true)
+    }
+  }, [])
+
   const handleCreateBlog = async (blog: NewBlog) => {
     try {
       const createdBlog = await blogService.create(blog)
