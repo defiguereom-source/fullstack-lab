@@ -1,0 +1,54 @@
+name: CI - Build and Notify
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Clona el repositorio en el entorno de ejecución
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Instala las dependencias del proyecto definidas en package.json
+      - name: Install dependencies
+        run: npm install
+
+      # Ejecuta el proceso de build definido en el proyecto
+      - name: Run build
+        run: npm run build
+
+      # Envía notificación a Discord cuando el job finaliza correctamente
+      - name: Discord success notification
+        if: success()
+        uses: Ilshidur/discord-webhook-notify@v2
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        with:
+          content: |
+            Build successful.
+            A new version was deployed.
+
+            Repository: ${{ github.repository }}
+            Commit: ${{ github.sha }}
+            Author: ${{ github.actor }}
+
+      # Envía notificación a Discord cuando el job falla
+      - name: Discord failure notification
+        if: failure()
+        uses: Ilshidur/discord-webhook-notify@v2
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        with:
+          content: |
+            Build failed.
+
+            Repository: ${{ github.repository }}
+            Commit: ${{ github.sha }}
+            Author: ${{ github.actor }}
+
+            Check the GitHub Actions logs for more details.
