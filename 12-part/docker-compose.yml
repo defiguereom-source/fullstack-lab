@@ -1,0 +1,9 @@
+version: "3.8"
+
+services:
+  frontend:
+    build:
+      context: ./anecdotes
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
