@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --font: 'IBM Plex Sans', system-ui, sans-serif;
+  --mono: 'IBM Plex Mono', monospace;
+  --bg: #f5f4f0;
+  --surface: #ffffff;
+  --border: #e2e0d8;
+  --border-dark: #c8c5bc;
+  --text: #1a1917;
+  --text-2: #6b6860;
+  --text-3: #9e9b94;
+  --accent: #2563eb;
+  --accent-bg: #eff6ff;
+  --accent-border: #bfdbfe;
+  --danger: #dc2626;
+  --danger-bg: #fef2f2;
+  --danger-border: #fecaca;
+  --success: #16a34a;
+  --warn: #d97706;
+  --warn-bg: #fffbeb;
+  --important: #f59e0b;
+  --radius: 8px;
+  --radius-lg: 12px;
+  --shadow: 0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.05);
+  --shadow-md: 0 4px 12px rgba(0,0,0,.08);
+}
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ---- Shell ---- */
+.app-shell { display: flex; flex-direction: column; min-height: 100vh; }
+
+.app-header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 0 1.5rem;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-brand { display: flex; align-items: center; gap: 8px; }
+.brand-icon { font-size: 20px; }
+.brand-name { font-weight: 600; font-size: 15px; letter-spacing: -.3px; }
+
+.header-user { display: flex; align-items: center; gap: 12px; }
+
+.user-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text-2);
+  background: var(--bg);
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+}
+.user-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--success);
+}
+
+.btn-logout {
+  font-family: var(--font);
+  font-size: 13px;
+  padding: 5px 12px;
+  border: 1px solid var(--border-dark);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+  transition: background .15s;
+}
+.btn-logout:hover { background: var(--bg); }
+.btn-logout:disabled { opacity: .5; cursor: default; }
+
+/* ---- Auth Layout ---- */
+.auth-layout {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem 1.5rem;
+}
+
+.auth-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  width: 100%;
+  max-width: 360px;
+  box-shadow: var(--shadow-md);
+}
+
+.auth-header { text-align: center; margin-bottom: 1.5rem; }
+.auth-icon { font-size: 2.5rem; margin-bottom: 0.5rem; }
+.auth-header h2 { font-size: 1.3rem; font-weight: 600; }
+.auth-sub { color: var(--text-3); font-size: 12px; margin-top: 4px; font-family: var(--mono); }
+
+.auth-form { display: flex; flex-direction: column; gap: 1rem; }
+
+.auth-info {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  max-width: 320px;
+  align-self: flex-start;
+  margin-top: 0.25rem;
+}
+.auth-info h3 { font-size: 13px; font-weight: 600; margin-bottom: 8px; color: var(--text-2); text-transform: uppercase; letter-spacing: .5px; }
+.auth-info p { font-size: 13px; color: var(--text-2); margin-bottom: 8px; }
+.auth-info ul { list-style: none; display: flex; flex-direction: column; gap: 5px; }
+.auth-info li { font-size: 13px; color: var(--text-2); }
+.auth-info code { font-family: var(--mono); font-size: 11px; background: var(--bg); padding: 1px 4px; border-radius: 4px; color: var(--accent); }
+
+/* ---- Form Fields ---- */
+.field { display: flex; flex-direction: column; gap: 5px; }
+.field label { font-size: 13px; font-weight: 500; color: var(--text-2); }
+.field input {
+  font-family: var(--font);
+  font-size: 14px;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+  outline: none;
+  transition: border-color .15s;
+}
+.field input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-bg); }
+
+.btn-primary {
+  font-family: var(--font);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: opacity .15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+}
+.btn-primary:hover:not(:disabled) { opacity: .9; }
+.btn-primary:disabled { opacity: .6; cursor: default; }
+
+.spinner {
+  width: 16px; height: 16px;
+  border: 2px solid rgba(255,255,255,.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin .6s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ---- Alerts ---- */
+.alert {
+  padding: 10px 12px;
+  border-radius: var(--radius);
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  cursor: pointer;
+}
+.alert-error {
+  background: var(--danger-bg);
+  border: 1px solid var(--danger-border);
+  color: var(--danger);
+}
+.alert-close {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: inherit;
+  line-height: 1;
+  padding: 0 2px;
+}
+
+/* ---- Notes Layout ---- */
+.notes-layout {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 0;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  width: 100%;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+/* ---- Sidebar ---- */
+.notes-sidebar { position: sticky; top: 72px; }
+
+.session-info {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+}
+.session-info h4 {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .6px;
+  color: var(--text-3);
+  margin-bottom: 12px;
+}
+.session-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 10px;
+}
+.session-detail .label { font-size: 11px; color: var(--text-3); }
+.session-detail span:last-child { font-size: 13px; }
+.token-preview { font-family: var(--mono); font-size: 11px; color: var(--accent); }
+.session-tip {
+  font-size: 12px;
+  color: var(--text-3);
+  line-height: 1.5;
+  border-top: 1px solid var(--border);
+  padding-top: 10px;
+  margin-top: 10px;
+}
+.session-tip code { font-family: var(--mono); font-size: 10px; background: var(--bg); padding: 1px 4px; border-radius: 3px; color: var(--accent); }
+
+/* ---- Notes Main ---- */
+.notes-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.notes-toolbar h2 { font-size: 1.1rem; font-weight: 600; }
+
+.filter-tabs { display: flex; gap: 4px; }
+.filter-tab {
+  font-family: var(--font);
+  font-size: 13px;
+  padding: 5px 12px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--surface);
+  color: var(--text-2);
+  cursor: pointer;
+  transition: all .15s;
+}
+.filter-tab:hover { background: var(--bg); }
+.filter-tab.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+/* ---- Note Form ---- */
+.note-form {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 10px 12px;
+  margin-bottom: 1rem;
+}
+.note-input {
+  flex: 1;
+  font-family: var(--font);
+  font-size: 14px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--text);
+}
+.note-input::placeholder { color: var(--text-3); }
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  color: var(--text-2);
+  cursor: pointer;
+  white-space: nowrap;
+}
+.btn-add {
+  font-family: var(--font);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 14px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  white-space: nowrap;
+}
+.btn-add:disabled { opacity: .5; cursor: default; }
+
+/* ---- Note Items ---- */
+.notes-list { display: flex; flex-direction: column; gap: 6px; }
+
+.note-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  transition: border-color .15s;
+}
+.note-item:hover { border-color: var(--border-dark); }
+.note-item.note-important { border-left: 3px solid var(--important); }
+
+.note-body { flex: 1; min-width: 0; }
+.note-content { font-size: 14px; color: var(--text); }
+.note-author { font-size: 11px; color: var(--text-3); margin-top: 2px; display: block; }
+
+.note-actions { display: flex; align-items: center; gap: 6px; }
+
+.badge-btn {
+  font-family: var(--font);
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: 1px solid;
+  transition: all .15s;
+  white-space: nowrap;
+}
+.badge-important { background: var(--warn-bg); color: var(--warn); border-color: #fcd34d; }
+.badge-normal { background: var(--bg); color: var(--text-3); border-color: var(--border); }
+
+.btn-delete {
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-3);
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .15s;
+}
+.btn-delete:hover { background: var(--danger-bg); border-color: var(--danger-border); color: var(--danger); }
+
+/* ---- States ---- */
+.loading-state, .empty-state {
+  text-align: center;
+  padding: 3rem;
+  color: var(--text-3);
+  font-size: 14px;
+  background: var(--surface);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-lg);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 700px) {
+  .notes-layout { grid-template-columns: 1fr; }
+  .notes-sidebar { position: static; }
+  .auth-layout { flex-direction: column; align-items: center; }
+  .auth-info { max-width: 360px; }
+}
